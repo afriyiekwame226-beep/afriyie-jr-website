@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Afriyie Jr | Drummer Bookings</title>
+  <meta name="description" content="Book Afriyie Jr for church services, studio sessions, drum tech services and live performances." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background: photos blended + animated colour wash -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-layer bg-main"></div>
+    <div class="bg-layer bg-stage"></div>
+    <div class="bg-layer bg-studio"></div>
+    <div class="bg-wash"></div>
+    <span class="orb orb1"></span>
+    <span class="orb orb2"></span>
+    <span class="orb orb3"></span>
+    <span class="orb orb4"></span>
+  </div>
+
+  <!-- Logo: fixed top, far right -->
+  <a href="#top" class="logo" aria-label="Afriyie Jr home">
+    <img src="MYLOGO.JPG" alt="Afriyie Jr logo" />
+  </a>
+
+  <header id="top" class="hero">
+    <p class="eyebrow">Church Service &bull; Drum Tech &bull; Live Performance &bull; Studio</p>
+    <h1>Serving <span>you </span> with the best ✔</h1>
+    <p class="lead">Book me for your church service, studio session, drum tech needs or live performance. Fill in the form and let's link up.</p>
+    <div class="equalizer" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <a href="#booking" class="btn">Book a Service</a>
+  </header>
+
+  <section class="services" id="services">
+    <h2>What I Do</h2>
+    <div class="cards">
+      <article class="card" data-service="Church Service Booking">
+        <div class="icon">&#9835;</div>
+        <h3>Church Service</h3>
+        <p>Tasteful, dynamic drumming that lifts worship and serves the moment.</p>
+      </article>
+      <article class="card" data-service="Studio Session Booking">
+        <div class="icon">&#127911;</div>
+        <h3>Studio Sessions</h3>
+        <p>Tight, creative, record-ready drum tracks for your project.</p>
+      </article>
+      <article class="card" data-service="Drum Tech Service Booking">
+        <div class="icon">&#128295;</div>
+        <h3>Drum Tech Services</h3>
+        <p>Tuning, setup, miking and maintenance so your kit sounds its best.</p>
+      </article>
+      <article class="card" data-service="Live Performance Booking">
+        <div class="icon">&#127908;</div>
+        <h3>Live Performance</h3>
+        <p>High-energy, professional performances for concerts and events.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="booking" id="booking">
+    <form id="bookingForm" novalidate>
+      <h2>Book a Service</h2>
+      <p class="sub">Tell me who you are, where you are, and what you need.</p>
+
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Kofi Mensah" autocomplete="name" required />
+      <small class="error" id="nameError"></small>
+
+      <label for="location">Your Location</label>
+      <input type="text" id="location" name="location" placeholder="e.g. Accra, Ghana" autocomplete="address-level2" required />
+      <small class="error" id="locationError"></small>
+
+      <label for="service">Service Request Type</label>
+      <select id="service" name="service" required>
+        <option value="" disabled selected>-- Select a service --</option>
+        <option>Church Service Booking</option>
+        <option>Studio Session Booking</option>
+        <option>Drum Tech Service Booking</option>
+        <option>Live Performance Booking</option>
+      </select>
+      <small class="error" id="serviceError"></small>
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required />
+      <small class="error" id="dateError"></small>
+
+      <label for="time">Preferred Time</label>
+      <input type="time" id="time" name="time" required />
+      <small class="error" id="timeError"></small>
+
+      <button type="submit" class="btn full">Send Booking Request</button>
+      <div id="result" class="result" role="status" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Afriyie Jr. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
